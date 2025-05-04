@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:5175/api/1';
+  private apiUrl = 'https://localhost:7273/api/Person/1';
 
   constructor(private http: HttpClient) { }
 
-  getValues(): Observable<string[]> {
+  getData(): Observable<string[]> {
     return this.http.get<string[]>(this.apiUrl);
   }
 }
